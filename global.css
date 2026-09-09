@@ -165,7 +165,6 @@ nav ul a {
   color: var(--cor-texto-claro);               /* branco no fundo preto */
   font-weight: 600;
   font-size: .95rem;
-  text-transform: capitalize;
   transition: color var(--transicao), background var(--transicao);
 }
 nav ul a:hover,
@@ -405,11 +404,6 @@ nav ul a:focus-visible {
 #avaliacoes blockquote p {
   color: var(--cor-texto);
   font-style: italic;
-}
-#avaliacoes .avaliacao-meta {
-  color: var(--cor-texto-suave);
-  font-size: .82rem;
-  margin-top: -.4rem;                /* cola no nome */
 }
 #avaliacoes .avaliacao-reacao {
   font-size: 1.15rem;
