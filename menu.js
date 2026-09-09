@@ -1,15 +1,11 @@
-// Menu-sanduíche do cabeçalho — só melhora a experiência no celular.
-// Degradação graciosa: sem este JS, o menu já aparece normal (CSS base).
-// Quando o JS roda, marcamos a nav com a classe "com-js" e aí o CSS
-// esconde o menu atrás do botão. Sem try-catch (padrão do Thiago): uso guardas.
+// Menu-sanduíche do cabeçalho (celular). O menu já nasce ESCONDIDO no CSS
+// (evita o flash de menu aberto no 1º carregamento); este JS só abre/fecha
+// alternando data-menu na nav. Sem try-catch (padrão do Thiago): uso guardas.
 (function () {
   const nav = document.querySelector("nav");
   const botao = document.querySelector(".abre-menu");
   const menu = document.getElementById("menu-principal");
   if (!nav || !botao || !menu) return; // faltou algo -> não faz nada (menu segue visível)
-
-  // sinaliza ao CSS que o JS está ativo (só então o menu vira sanduíche)
-  nav.classList.add("com-js");
 
   function alterna(abrir) {
     const aberto = abrir === undefined ? nav.dataset.menu !== "aberto" : abrir;
